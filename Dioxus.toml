@@ -1,0 +1,53 @@
+[application]
+
+# App (Project) Name
+name = "dx-desktop-demo"
+
+# Dioxus App Default Platform
+# web, desktop, fullstack
+default_platform = "desktop"
+
+# `build` & `serve` dist path
+out_dir = "dist"
+
+# assets file folder
+asset_dir = "assets"
+
+[web.app]
+
+# HTML title tag content
+title = "dx-desktop-demo"
+
+[web.watcher]
+
+# when watcher trigger, regenerate the `index.html`
+reload_html = true
+
+# which files or dirs will be watcher monitoring
+watch_path = ["src", "assets"]
+
+# include `assets` in web platform
+#[web.resource]
+
+# CSS style file
+
+style = ["tailwind.css", "bootstrap.min.css"]
+
+# Javascript code file
+script = ["bootstrap.bundle.min.js"]
+
+#[web.resource.dev]
+
+# Javascript code file
+# serve: [dev-server] only
+#script = []
+
+
+[bundle]
+resources_map = [
+    "main.css",
+    "header.svg",
+    "**/*.png",
+    "bootstrap.min.css",
+    "bootstrap.bundle.min.js",
+] # The list of files to include in the bundle. These can contain globs.
