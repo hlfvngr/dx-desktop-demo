@@ -5,8 +5,8 @@ on:
 
 jobs:
   window_package_job:
-    name: 打包windows可执行程序
-    runs-on: windows-latest
+    name: 打包linux可执行程序
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
