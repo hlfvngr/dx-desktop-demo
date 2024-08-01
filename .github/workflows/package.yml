@@ -1,0 +1,18 @@
+on:
+  push: 
+    branches:
+    - main
+
+jobs:
+  window_package_job:
+    name: 打包windows可执行程序
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: 安装dioxus-cli
+      run: cargo install dioxus-cli
+    
+    - name: 打包运行.exe文件
+      run: dx bundle --release
