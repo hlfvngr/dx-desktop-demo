@@ -5,8 +5,8 @@ use dioxus_logger::tracing::{info, Level};
 use dx_desktop_demo::codec::Codec;
 use dx_desktop_demo::rust_crypt_codec::AesCodec;
 
-const _: &str = manganis::mg!(file("assets/bootstrap.bundle.min.js"));
-const _: &str = manganis::mg!(file("assets/bootstrap.min.css"));
+const _JS: &str = manganis::mg!(file("assets/bootstrap.bundle.min.js"));
+const _CSS: &str = manganis::mg!(file("assets/bootstrap.min.css"));
 
 fn main() {
     // Init logger
