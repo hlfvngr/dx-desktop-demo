@@ -1,11 +1,10 @@
-#![allow(non_snake_case)]
+#![cfg_attr(feature = "bundle", windows_subsystem = "windows")]
 
 use dioxus::prelude::*;
 use dioxus_logger::tracing::{info, Level};
 use dx_desktop_demo::codec::Codec;
 use dx_desktop_demo::rust_crypt_codec::AesCodec;
 
-#[cfg_attr(feature = "bundle", windows_subsystem = "windows")]
 fn main() {
     // Init logger
     dioxus_logger::init(Level::INFO).expect("failed to init logger");
