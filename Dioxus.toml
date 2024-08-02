@@ -14,7 +14,7 @@ out_dir = "docs"
 asset_dir = "assets"
 
 [web.app]
-base_path = "codec"
+base_path = "dx-desktop-demo"
 
 # HTML title tag content
 title = "dx-desktop-demo"
