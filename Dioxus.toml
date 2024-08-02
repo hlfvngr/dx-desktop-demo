@@ -5,15 +5,16 @@ name = "dx-desktop-demo"
 
 # Dioxus App Default Platform
 # web, desktop, fullstack
-default_platform = "desktop"
+default_platform = "web"
 
 # `build` & `serve` dist path
-out_dir = "dist"
+out_dir = "docs"
 
 # assets file folder
 asset_dir = "assets"
 
 [web.app]
+base_path = "codec"
 
 # HTML title tag content
 title = "dx-desktop-demo"
