@@ -5,15 +5,15 @@ use dioxus_logger::tracing::{info, Level};
 use dx_desktop_demo::codec::Codec;
 use dx_desktop_demo::rust_crypt_codec::AesCodec;
 
+const _: &str = manganis::mg!(file("assets/bootstrap.bundle.min.js"));
+const _: &str = manganis::mg!(file("assets/bootstrap.min.css"));
+
 fn main() {
     // Init logger
     dioxus_logger::init(Level::INFO).expect("failed to init logger");
     info!("starting app");
-    launch(App);
-    // let cfg = dioxus::desktop::Config::new()
-    //     //.with_custom_head(r#"<link rel="stylesheet" href="tailwind.css">"#.to_string())
-    //     .with_custom_head(r#"<script src="bootstrap.bundle.min.js"></script>"#.to_string())
-    //     .with_custom_head(r#"<link href="bootstrap.min.css" rel="stylesheet">"#.to_string());
+
+    LaunchBuilder::web().launch(App);
     // LaunchBuilder::desktop().with_cfg(cfg).launch(App);
 }
 
